@@ -1,0 +1,194 @@
+@font-face {
+    font-family: 'Source Han Sans';
+    src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap');
+}
+:root{
+    --c-text-1:#333;
+    --c-text-2:#666;
+    --c-text-a:rgba(0,0,0,.5);
+    --c-bg-1:#fff;
+    --c-bg-2:#f6f8f9;
+    --c-bg-3:#f0f3f5;
+    --c-border:#e0e7eb;
+    --c-bg-a50:hsla(0,0%,100%,.5);
+    --c-primary-1:#1966ff;
+    --c-primary-2:rgba(0,128,255,.3);
+    --c-primary-3:rgba(51,136,255,.15);
+    --c-primary-soft:rgba(41,41,61,.05)
+}
+@media (prefers-color-scheme:dark){
+    :root:not([data-theme=light]){
+        --c-text-1:#e6e6e6;
+        --c-text-2:#999;
+        --c-text-a:hsla(0,0%,100%,.5);
+        --c-bg-1:#000;
+        -c-bg-2:#121212;
+        --c-bg-3:#262626;
+        --c-border:#333;
+        --c-bg-a50:rgba(0,0,0,.5);
+        --c-primary-1:#69f;
+        --c-primary-2:rgba(102,179,255,.3);
+        --c-primary-3:rgba(51,136,255,.2);
+        --c-primary-soft:rgba(230,238,255,.1)
+    }
+}
+*{
+    margin:0;padding:0
+}
+*,:after,:before{
+    box-sizing:border-box
+}
+a{
+    color:inherit;
+    text-decoration:none;
+    -webkit-tap-highlight-color:var(--c-primary-3)
+}
+:root{
+    background-color:var(--c-bg-1);
+    color:var(--c-text-1);
+    font-family:sans-serif
+}
+::-moz-selection{
+    background-color:var(--c-primary-2)
+}
+::selection{
+    background-color:var(--c-primary-2)
+}
+p{
+    line-height:1.4
+}
+mark{
+    animation:line-spread .5s;
+    background:linear-gradient(var(--c-primary-2),var(--c-primary-2)) no-repeat 0 100%/100% .3em;
+    color:var(--c-primary-1);
+    text-decoration:none;
+    transition:.2s
+}
+@keyframes line-spread{
+    0%{background-size:0 .3em}
+}
+mark:hover{
+    background-size:100% 50%
+}
+.wrapper{
+    margin:0 auto;
+    max-width:768px
+}
+
+body {
+    font-family: 'Source-Han-Sans', Arial, sans-serif;
+    line-height: 1.3;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #b0b1b1;
+    color: #333;
+    padding: 20px;
+  }
+  
+  header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header ul li {
+    display: inline;
+  }
+  
+  header ul li a {
+    color: #000;
+    text-decoration: none;
+    padding: 10px 20px;
+    text-align: center;
+  }
+  
+  .container {
+    display: flex;
+  }
+  
+  aside ul li a {
+    color: #000;  /* 链接的默认颜色，例如深灰色 */
+    font-size: 16px;  /* 合适的字体大小 */
+    padding: 10px 15px;  /* 内边距，以增加点击区域和视觉效果 */
+    display: block;  /* 使链接占据整个列表项区域，方便点击 */
+    text-decoration: none;
+  
+    transition: color 0.3s ease;  /* 平滑的颜色过渡效果 */
+  
+    &:hover {
+      color: #ffffff;  /* 鼠标悬停时的颜色，例如蓝色 */
+      background-color: #1966ff;  /* 鼠标悬停时的背景色，例如浅灰色 */
+    }
+  }
+
+  liin {
+    color: #000;  /* 链接的默认颜色，例如深灰色 */
+    font-size: 16px;  /* 合适的字体大小 */
+    padding: 10px 15px;  /* 内边距，以增加点击区域和视觉效果 */
+    display: block;  /* 使链接占据整个列表项区域，方便点击 */
+    text-decoration: none;
+  
+    transition: color 0.3s ease;  /* 平滑的颜色过渡效果 */
+    color: #000;  /* 鼠标悬停时的颜色，例如蓝色 */
+    background-color: #ebedef;
+  }
+
+  aside {
+    width: 12.5%;
+    background-color: #f6f8f9;
+    padding: 20px;
+  }
+  
+  main {
+    width: 80%;
+    padding: 20px;
+  }
+  
+  footer {
+    background-color: #ebedef;
+    color: #333;
+    padding: 20px;
+    margin: 30px auto;
+  }
+  
+  footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  footer ul li {
+    display: inline;
+  }
+  
+  footer ul li a {
+    color: #000;
+    text-decoration: none;
+    padding: 10px 20px;
+  }
+
+  p {
+    color: #000
+  }
+
+  main {
+    margin: 30px auto;
+    padding-top: 30px;
+  }
+  
+  @media (max-width: 768px) {
+   .container {
+      flex-direction: column;
+    }
+  
+    aside {
+      width: 100%;
+    }
+  
+    main {
+      width: 100%;
+    }
+  }
